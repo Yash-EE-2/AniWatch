@@ -8,7 +8,7 @@ const app = express();
 let corsorigin={
     origin: process.env.CORS_ORIGIN,
     credentials: true,
-    methods: "GET, POST, PUT, DELETE",
+    methods: "GET, POST, PUT, DELETE,PATCH, OPTIONS",
 }
 
 app.use(cors(
