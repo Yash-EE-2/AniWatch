@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       // "/api": "https://playtubebyyashpz.onrender.com/api/v1",
-      "/api": "http://localhost:8000/api/v1",
+      "/api": "https://aniwatch-1-pda0.onrender.com/api/v1",
     },
   },
 });
