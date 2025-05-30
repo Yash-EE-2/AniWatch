@@ -5,12 +5,15 @@ import morgan from "morgan";
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["https://playtube-by-yashpz.vercel.app", "http://localhost:5173"],
+let corsorigin={
+    origin: process.env.CORS_ORIGIN,
     credentials: true,
-  })
-);
+    methods: "GET, POST, PUT, DELETE",
+}
+
+app.use(cors(
+    corsorigin
+))
 // origin: process.env.CORS_ORIGIN,
 
 app.use(express.json({ limit: "99mb" }));
